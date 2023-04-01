@@ -22,7 +22,7 @@ class Predictor(cog.Predictor):
 
         # nouns defined in utils.py
         nouns = NOUNS.split(' ')
-        noun_prompts = ["a drawing of a " + x for x in nouns]
+        noun_prompts = [f"a drawing of a {x}" for x in nouns]
 
         # Calculate features
         with torch.no_grad():
